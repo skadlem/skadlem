@@ -5,13 +5,13 @@ CS undergraduate at City University of Hong Kong (Year 3), previously on exchang
 ## What I build
 
 - **Low-latency systems** — [orderbook](https://github.com/skadlem/orderbook): C++23 limit order book and matching engine — bitmap ladder, zero-alloc intrusive pool, IOC/FOK/PostOnly/STP, incremental L2 + seqlock BBO, ITCH 5.0 engine-vs-feed validation (0 violations on full trading days), OUCH 4.2 order-entry gateway, honest min-of-N benchmarking vs 4 vendored rivals (~18 ns/op mixed)
-- **AI-powered apps** — [roof-bot](https://github.com/skadlem/roof-bot): Gemini-driven WhatsApp lead-conversation bot (FastAPI, WhatsApp Cloud API, Google Sheets export, follow-up scheduling)
+- **AI-powered apps** — [roof-bot](https://github.com/skadlem/roof-bot): a WhatsApp roofing sales manager — Gemini agent on LangGraph (tool-calling) running a full SPIN sales script, RAG knowledge base (ChromaDB), live pricing from a price list, voice-message transcription, and every confirmed lead delivered to Google Sheets + the owner's WhatsApp
 - **Mobile** — [diary](https://github.com/skadlem/diary): React Native / Expo app with local persistence (thoughts, 30-day reviews, yearly goals)
 - **Web** — [dostupnaya-sreda](https://github.com/skadlem/dostupnaya-sreda): Next.js 14 landing page with ru/kk i18n, live on Vercel
 
 ## Stack
 
-React Native, JavaScript, TypeScript, Python (FastAPI), Next.js, C++, Java, C#
+React Native, JavaScript, TypeScript, Python (FastAPI), C++ (C++23, CMake, sanitizers), LangGraph / Gemini, RAG (ChromaDB), Next.js, Java, C#
 
 ## Currently
 
