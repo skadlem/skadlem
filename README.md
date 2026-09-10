@@ -5,7 +5,8 @@ CS undergraduate at City University of Hong Kong (Year 3), previously on exchang
 ## What I build
 
 - **Low-latency systems** — [orderbook](https://github.com/skadlem/orderbook): C++23 limit order book and matching engine — bitmap ladder, zero-alloc intrusive pool, IOC/FOK/PostOnly/STP, incremental L2 + seqlock BBO, ITCH 5.0 engine-vs-feed validation (0 violations on full trading days), OUCH 4.2 order-entry gateway, honest min-of-N benchmarking vs 4 vendored rivals (~18 ns/op mixed)
-- **Developer tooling** — [pm-agent-team](https://github.com/skadlem/pm-agent-team): PMOS, a host-portable multi-agent project-management template (jcode, Claude Code, Hermes, OpenHands SDK) — role agents with per-role hybrid-search knowledge bases (BM25 + vector, reciprocal rank fusion), graphify repo context, wave-based execution with human approval gates, a real-time spend ledger priced from Epoch AI benchmarks, and SPARQL-queryable artifact traceability
+- **Developer tooling** — [pm-agent-team](https://github.com/skadlem/pm-agent-team): PMOS, a host-portable multi-agent project-management template (jcode, Claude Code, Hermes, OpenHands SDK) — role agents with per-role hybrid-search knowledge bases (BM25 + vector, reciprocal rank fusion), graphify repo context, wave-based execution with human approval gates, a real-time spend ledger priced from Epoch AI benchmarks, and SPARQL-queryable artifact traceability — validated by shipping [cronx](https://github.com/skadlem/cronx), a stdlib-only DST-aware cron explainer, via a PMOS agent team
+- **Role-tuned models** — [ftt](https://github.com/skadlem/ftt): QLoRA-distilled 8B planner for PMOS agent teams — matches an open-weight teacher on real planning tasks, judged blind-pairwise; local GGUF artifact, near-zero run cost
 - **AI-powered apps** — [roof-bot](https://github.com/skadlem/roof-bot): a WhatsApp roofing sales manager — Gemini agent on LangGraph (tool-calling) running a full SPIN sales script, RAG knowledge base (ChromaDB), live pricing from a price list, voice-message transcription, and every confirmed lead delivered to Google Sheets + the owner's WhatsApp
 - **Poker research** — [poKING](https://github.com/skadlem/poKING): a 6-max No-Limit Hold'em research project — rules engine, hand-tuned bot, a PPO agent (PyTorch) and an NFSP average-policy pipeline validated against exact exploitability on Kuhn poker, with seed-replicated, claim-disciplined benchmarking (found and fixed a rebuy bug that had inflated variance ~2,800x) — PPO beats the heuristic bot +604 bb/100 heads-up, NFSP's average policy comes out 2-4x less exploitable
 - **Mobile** — [diary](https://github.com/skadlem/diary): React Native / Expo app — Firebase email/password auth, full task CRUD (thoughts, 30-day reviews, yearly goals, daily summaries), local AsyncStorage persistence, and a mini-game
@@ -17,7 +18,7 @@ React Native, JavaScript, TypeScript, Python (FastAPI, numba, PyTorch, pytest), 
 
 ## Currently
 
-Building PMOS — a host-portable multi-agent project-management template — and training RL poker agents (PPO, NFSP) in poKING.
+Building PMOS and distilling its planner into a local 8B model (ftt), plus training RL poker agents (PPO, NFSP) in poKING.
 
 ## Languages
 
