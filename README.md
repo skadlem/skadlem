@@ -1,30 +1,55 @@
-# Hi, I'm Madiyar Yengsebek 👋
+# Madiyar Yengsebek
 
-CS undergraduate at City University of Hong Kong (Year 3), previously on exchange at Vilnius University. I build low-latency systems, cross-platform mobile and AI-powered applications end to end, and developer tooling for multi-agent workflows.
+**AI-agent systems + low-latency C++**
 
-## What I build
+CS @ City University of Hong Kong · Class of 2028 · Open to Summer 2027 SWE and AI-agent internships
 
-- **Low-latency systems** — [orderbook](https://github.com/skadlem/orderbook): C++23 limit order book and matching engine — bitmap ladder, zero-alloc intrusive pool, IOC/FOK/PostOnly/STP, incremental L2 + seqlock BBO, ITCH 5.0 engine-vs-feed validation (0 violations on full trading days), OUCH 4.2 order-entry gateway, honest min-of-N benchmarking vs 4 vendored rivals (~18 ns/op mixed)
-- **Developer tooling** — [pm-agent-team](https://github.com/skadlem/pm-agent-team): PMOS, a host-portable multi-agent project-management template (jcode, Claude Code, Hermes, OpenHands SDK) — role agents with per-role hybrid-search knowledge bases (BM25 + vector, reciprocal rank fusion), graphify repo context, wave-based execution with human approval gates, a real-time spend ledger priced from Epoch AI benchmarks, and SPARQL-queryable artifact traceability — validated by shipping [cronx](https://github.com/skadlem/cronx), a stdlib-only DST-aware cron explainer, via a PMOS agent team
-- **Role-tuned models** — [ftt](https://github.com/skadlem/ftt): QLoRA-distilled 8B planner for PMOS agent teams — matches an open-weight teacher on real planning tasks, judged blind-pairwise; local GGUF artifact, near-zero run cost
-- **AI-powered apps** — [roof-bot](https://github.com/skadlem/roof-bot): a WhatsApp roofing sales manager — Gemini agent on LangGraph (tool-calling) running a full SPIN sales script, RAG knowledge base (ChromaDB), live pricing from a price list, voice-message transcription, and every confirmed lead delivered to Google Sheets + the owner's WhatsApp
-- **Poker research** — [poKING](https://github.com/skadlem/poKING): a 6-max No-Limit Hold'em research project — rules engine, hand-tuned bot, a PPO agent (PyTorch) and an NFSP average-policy pipeline validated against exact exploitability on Kuhn poker, with seed-replicated, claim-disciplined benchmarking (found and fixed a rebuy bug that had inflated variance ~2,800x) — PPO beats the heuristic bot +604 bb/100 heads-up, NFSP's average policy comes out 2-4x less exploitable
-- **Mobile** — [diary](https://github.com/skadlem/diary): React Native / Expo app — Firebase email/password auth, full task CRUD (thoughts, 30-day reviews, yearly goals, daily summaries), local AsyncStorage persistence, and a mini-game
-- **Web** — [dostupnaya-sreda](https://github.com/skadlem/dostupnaya-sreda): Next.js 14 landing page with ru/kk i18n and dark mode, live on Vercel
+I build AI-agent tools and performance-critical software, with an emphasis on measurable behavior, reproducibility, and failure handling.
+
+[LinkedIn](https://www.linkedin.com/in/yengsebek/) · [Email](mailto:myengsebe2-c@my.cityu.edu.hk)
+
+## Selected work
+
+### [orderbook](https://github.com/skadlem/orderbook) — Low-latency C++23 matching engine
+
+A price-time-priority limit order book and matching engine validated against real ITCH 5.0 market data, with an OUCH 4.2 order-entry gateway.
+
+**16.6–18.5 ns/op mixed · 11M+ differential checks · zero violations on full NASDAQ ITCH replay**
+
+`C++23` · `CMake` · `ASan/UBSan` · `ITCH/OUCH`
+
+[Repository](https://github.com/skadlem/orderbook) · [Architecture and benchmarks](https://github.com/skadlem/orderbook#system-tour)
+
+### [roof-bot](https://github.com/skadlem/roof-bot) — WhatsApp AI sales agent
+
+A Russian-language sales agent that qualifies leads, quotes from live pricing data, transcribes voice messages, and exports confirmed orders to Google Sheets and the owner's WhatsApp.
+
+**96% grounded · 92% correct on a 24-case evaluation set**
+
+`Python` · `FastAPI` · `Gemini` · `LangGraph` · `RAG`
+
+[Repository](https://github.com/skadlem/roof-bot) · [Evaluation](https://github.com/skadlem/roof-bot#evaluations)
+
+### [PMOS](https://github.com/skadlem/pm-agent-team) — Multi-agent development framework
+
+A host-portable framework for role-specialized agents with hybrid knowledge bases, human approval gates, spend tracking, and artifact traceability. Runs on Claude Code, jcode, Hermes, and OpenHands.
+
+Used by a PMOS agent team to ship [cronx](https://github.com/skadlem/cronx), a DST-aware, standard-library-only cron explainer.
+
+[Repository](https://github.com/skadlem/pm-agent-team)
+
+## Current work
+
+**[rof](https://github.com/skadlem/rof-harness)** — a local Rust agent runtime with deterministic context assembly, deny-by-default tool permissions, and reproducible evaluation traces. Its current 20-task suite averages **17/20 across three runs**.
+
+## Research
+
+**[poKING](https://github.com/skadlem/poKING)** — seeded PPO and NFSP research in a poker engine, built around honest measurement. Includes a write-up of a benchmark bug that inflated measured variance by approximately **2,800×**.
 
 ## Stack
 
-React Native, JavaScript, TypeScript, Python (FastAPI, numba, PyTorch, pytest), C++ (C++23, CMake, sanitizers), LangGraph / Gemini, RAG (ChromaDB), Firebase, SQLite (FTS5, hybrid search), Next.js, Java, C#
+- **Core:** Python · C++ · TypeScript/JavaScript
+- **AI and agents:** Gemini · LangGraph · RAG · PyTorch · evaluation harnesses
+- **Systems and product:** CMake · FastAPI · SQLite · Next.js · React Native · Firebase
 
-## Currently
-
-Building PMOS and distilling its planner into a local 8B model (ftt), plus training RL poker agents (PPO, NFSP) in poKING.
-
-## Languages
-
-English (C1, IELTS 7.5) · Russian (fluent) · Kazakh (fluent)
-
-## Contact
-
-- 📧 myengsebe2-c@my.cityu.edu.hk
-- 💼 [LinkedIn](https://www.linkedin.com/in/yengsebek/)
+English C1 (IELTS 7.5) · Russian · Kazakh
