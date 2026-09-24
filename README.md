@@ -50,6 +50,6 @@ Used by a PMOS agent team to ship [cronx](https://github.com/skadlem/cronx), a D
 
 - **Core:** Python · C++ · TypeScript/JavaScript
 - **AI and agents:** Gemini · LangGraph · RAG · PyTorch · evaluation harnesses
-- **Systems and product:** CMake · FastAPI · SQLite · Next.js · React Native · Firebase
+- **Systems and product:** CMake · FastAPI · SQLite · Next.js · Firebase
 
 English C1 (IELTS 7.5) · Russian · Kazakh
